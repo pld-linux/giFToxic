@@ -1,0 +1,19 @@
+diff -urN aaa/giFToxic-0.0.9/data/giFToxic.desktop.in giFToxic-0.0.9/data/giFToxic.desktop.in
+--- aaa/giFToxic-0.0.9/data/giFToxic.desktop.in	2003-05-19 22:58:40.000000000 +0200
++++ giFToxic-0.0.9/data/giFToxic.desktop.in	2003-12-12 18:00:41.000000000 +0100
+@@ -1,10 +1,12 @@
+ [Desktop Entry]
+ Name=giFToxic
+-Comment[de]=Eine auf GTK+2 basierende GUI für das Filesharing Tool giFT
+ Comment=A GTK+2 based GUI for the filesharing tool giFT
++Comment[de]=Eine auf GTK+2 basierende GUI für das Filesharing Tool giFT
++Comment[pl]=Graficzna nak³adka na program giFT
+ Exec=giFToxic
+ StartupNotify=true
+-Terminal=0
++Terminal=false
+ Type=Application
+ Icon=@PIXMAPDIR@/giFToxic-48.png
+-Categories=Application;Network;
++Categories=Application;Network;FileTransfer;
++Encoding=UTF-8
