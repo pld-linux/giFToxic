@@ -8,6 +8,7 @@ Group:		X11/Applications/Networking
 Source0:	http://dl.sourceforge.net/giftoxic/%{name}-%{version}.tar.gz
 # Source0-md5:	66fe05d5d34cf08d310886784682136f
 Patch0:		%{name}-home_etc.patch
+Patch1:		%{name}-desktop.patch
 URL:		http://giftoxic.sourceforge.net/
 BuildRequires:	giFT-devel >= 0.10.0
 BuildRequires:	gtk+2-devel >= 2.0.3
@@ -22,6 +23,7 @@ giFToxic jest graficznym klientem dla giFT bazuj±cym na GTK2.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %configure
