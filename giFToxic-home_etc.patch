@@ -1,0 +1,35 @@
+diff -Nru giFToxic-0.0.9.orig/src/utils.c giFToxic-0.0.9/src/utils.c
+--- giFToxic-0.0.9.orig/src/utils.c	2003-05-27 21:37:18.000000000 +0200
++++ giFToxic-0.0.9/src/utils.c	2003-11-11 16:30:55.000000000 +0100
+@@ -294,9 +294,10 @@
+ 	gchar buf[256];
+ 	gchar item1[256];
+ 	gchar item2[256];
++	gchar *home_etc = getenv("HOME_ETC");
+ 
+ 	/* read giFT settings */
+-	config = g_build_filename(g_get_home_dir(), ".giFT", "ui", "ui.conf", NULL);
++	config = g_build_filename(home_etc ? home_etc : g_get_home_dir(), ".giFT", "ui", "ui.conf", NULL);
+ 
+ 	if ((f = fopen(config, "r"))) {
+ 		while (fgets(buf, sizeof(buf), f))
+@@ -314,7 +315,7 @@
+ 	g_free(config);
+ 
+ 	/* read our own settings */
+-	config = g_build_filename(g_get_home_dir(), ".giFToxicrc", NULL);
++	config = g_build_filename(home_etc ? home_etc : g_get_home_dir(), ".giFToxicrc", NULL);
+ 
+ 	if ((f = fopen(config, "r"))) {
+ 		while (fgets(buf, sizeof(buf), f))
+@@ -343,8 +344,9 @@
+ {
+ 	FILE	*f;
+ 	gchar	*config;
++	gchar *home_etc = getenv("HOME_ETC");
+ 
+-	config = g_build_filename(g_get_home_dir(), ".giFToxicrc", NULL);
++	config = g_build_filename(home_etc ? home_etc : g_get_home_dir(), ".giFToxicrc", NULL);
+ 
+ 	if ((f = fopen(config, "w"))) {
+ 		fprintf(f, "autoclean transfers = %i\n", options->autoclean);
