@@ -11,7 +11,7 @@ Patch0:		%{name}-home_etc.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://giftoxic.sourceforge.net/
 BuildRequires:	giFT-devel >= 0.10.0
-BuildRequires:	gtk+2-devel >= 2.0.3
+BuildRequires:	gtk+2-devel >= 1:2.0.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
