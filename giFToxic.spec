@@ -1,5 +1,5 @@
 Summary:	GTK2-based client for giFT
-Summary(pl.UTF-8):   Klient do giFT bazujący na GTK2
+Summary(pl.UTF-8):	Klient do giFT bazujący na GTK2
 Name:		giFToxic
 Version:	0.0.9
 Release:	2
